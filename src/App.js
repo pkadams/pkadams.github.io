@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 
+import SpinningCube from './SpinningCube.js';
 
 class App extends Component {
   render() {
@@ -56,7 +57,7 @@ function Home() {
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <SpinningCube/>;
 }
 
 function Users() {
