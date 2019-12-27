@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as three from 'three';
 
+
 class SpinningCube extends Component {
 
 	componentDidMount() {
@@ -29,7 +30,12 @@ class SpinningCube extends Component {
 
 	render() {
 
-		return <div ref="anchor" style={{width: 800, height:600}} />
+		return (<div data-aos="fade-up" data-aos-anchor-placement="center-bottom" style={{backgroundColor: 'coral'}}>
+					<p> Hello There!</p>
+				
+					<div ref="anchor" style={{width: 800, height:600}} />
+					 
+				</div>);
 	}
 
 

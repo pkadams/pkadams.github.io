@@ -9,12 +9,17 @@ import {
 } from "react-router-dom";
 
 import SpinningCube from './SpinningCube.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 class App extends Component {
+  componentDidMount(){
+    AOS.init({duration: 1500});
+  }
   render() {
     return (
       <Router>
-      <div className="App">
+      <div data-aos="flip-left" className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Perry&#39;s Sick Ass Website</h2>
@@ -53,7 +58,11 @@ class App extends Component {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h2> Home</h2>
+    </div>
+    );
 }
 
 function About() {
